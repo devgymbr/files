@@ -36,3 +36,24 @@ Esperado
 ### 2️⃣ DELETE /deployments/:id 
 
 ### 3️⃣ GET /deployments/:id
+
+
+## Como rodar a API na sua máquina 
+
+Você pode rodar o container simplesmente com docker run 
+
+```bash
+# a api estará disponível em localhost:3000
+docker pull -p 3000:8080 devgymbr/dg-kubeapi:9777542381a884289d28b36e0580c84816850dd5
+```
+
+Ou criar um arquivo `docker-compose.yaml` na pasta do seu projeto e rodar `docker-compose up`. O arquivo yaml teria a seguinte configuração 
+
+```yaml
+version: '3'
+services:
+  api:
+    image: 'devgymbr/dg-kubeapi:9777542381a884289d28b36e0580c84816850dd5'
+    ports:
+      - '3000:8080'
+```  
