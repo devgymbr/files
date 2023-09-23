@@ -38,7 +38,7 @@ Esperado
 ### 3️⃣ GET /deployments/:id
 
 
-## Como rodar a API na sua máquina 
+## Como rodar a API
 
 Você pode rodar o container simplesmente com docker run 
 
