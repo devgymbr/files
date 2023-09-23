@@ -19,7 +19,7 @@ Esperado
     "id" : "08f807b7-87f2-4990-bc61-56d69627147e",
     "replicas" : 1,
     "image" : "golang",
-    "labels: : ["equipe-x", "projeto-y"],
+    "labels":  ["equipe-x", "projeto-y"],
     "ports" : [
         {
             "name":"http",
