@@ -97,3 +97,5 @@ services:
     ports:
       - '3000:8080'
 ```  
+
+⚠️ No dockerhub temos docker images para as arquiteturas `linux/amd64` e `linux/arm64`, se precisar compilar e rodar o projeto em outra arquitetura, sinta-se livre em criar sua própria imagem usando o código fonte da API https://github.com/devgymbr/dg-kubeapi. 
