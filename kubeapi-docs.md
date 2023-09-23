@@ -32,15 +32,55 @@ Esperado
 
 ##### Response 
 
+* Status Code 201 - Sucesso.
+```json
+{
+    "id": "08f807b7-87f2-4990-bc61-56d69627147e",
+    "labels": null,
+    "replicas": 1,
+    "image": "golang",
+    "name": "",
+    "ports": [
+        {
+            "name": "http",
+            "port": 65
+        }
+    ],
+    "createAt": "2023-09-30T00:00:00Z"
+}
+```
+
+* Status code 409 - Erro de conflito, outro deployment ja criado com esse ID.
+* Status code 5xx - Erro interno da API.  
+
+
 
 ### 2️⃣ DELETE /deployments/:id 
 
+##### Request 
+Requisição sem corpo.
+
+##### Response 
+
+* Status Code 204 - Sucesso.
+* Status Code 404 - Deployment não encontrado.
+* Status code 5xx - Erro interno da API 
+
 ### 3️⃣ GET /deployments/:id
 
+##### Request 
+Requisição sem corpo.
+
+##### Response 
+
+* Status Code 200 - Sucesso.
+* Status Code 404 - Deployment não encontrado.
+* Status code 5xx - Erro interno da API 
 
 ## Como rodar a API
 
-Você pode rodar o container simplesmente com docker run 
+Você vai precisar de ter o Docker instalado na sua máquina assim como uma conta autenticado no registry padrão dockerhub. 
+Depois disso, você pode simplesmente subir um container com docker run 
 
 ```bash
 # a api estará disponível em localhost:3000
