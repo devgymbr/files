@@ -19,7 +19,10 @@ Esperado
     "id" : "08f807b7-87f2-4990-bc61-56d69627147e",
     "replicas" : 1,
     "image" : "golang",
-    "labels":  ["equipe-x", "projeto-y"],
+    "labels":  {
+        "monitor-label": "service-y",
+        "deployment-tag": "xpto"
+    },
     "ports" : [
         {
             "name":"http",
@@ -36,7 +39,10 @@ Esperado
 ```json
 {
     "id": "08f807b7-87f2-4990-bc61-56d69627147e",
-    "labels": null,
+    "labels":  {
+        "monitor-label": "service-y",
+        "deployment-tag": "xpto"
+    },
     "replicas": 1,
     "image": "golang",
     "name": "",
@@ -73,7 +79,7 @@ Requisição sem corpo.
 
 ##### Response 
 
-* Status Code 200 - Sucesso.
+* Status Code 200 - Sucesso com o mesmo corpo do POST endpoint.
 * Status Code 404 - Deployment não encontrado.
 * Status code 5xx - Erro interno da API 
 
